@@ -1,7 +1,6 @@
 #include <tuple>
 #include <iostream>
 
-/* Helper struct that is needed to iterate over an std tuple of arrays in order to initialize a stack array. */
 template<typename Lambda, std::size_t I = 0, typename... Tp>
 inline typename std::enable_if<I == sizeof...(Tp), void>::type
 execute_lambda_on_tuple(std::tuple<Tp...> const& t, Lambda const& l) { }
